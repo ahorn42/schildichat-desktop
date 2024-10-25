@@ -17,11 +17,11 @@ add_upstream() {
         echo "Remote named upstream already exists, deleting..."
         git remote remove upstream
     fi
-    local sc_remote="$(git remote -v|grep origin|grep fetch|sed 's|.*\t\(.*\) (fetch)|\1|')"
+    local sc_remote="$(git remote -v|grep origin|grep fetch|sed 's|.*\t\(.*\) (fetch)|\1|;s|git@github.com:|https://github.com/|')"
     if echo "$sc_remote" | grep -q matrix-js-sdk; then
         # matrix.org repo
         local upstream_remote="$(echo "$sc_remote" | sed 's|SchildiChat|matrix-org|')"
-    elif echo "$sc_remote" | grep -q "element\\|matrix-react-sdk"; then
+    elif echo "$sc_remote" | grep -q "element\\|matrix-react-sdk\\|compound-web"; then
         # vector-im repo
         local upstream_remote="$(echo "$sc_remote" | sed 's|SchildiChat|element-hq|')"
     else
@@ -34,7 +34,7 @@ add_upstream() {
 }
 
 forall_repos() {
-    for repo in "matrix-js-sdk" "matrix-react-sdk" "element-web" "element-desktop"; do
+    for repo in "matrix-js-sdk" "matrix-react-sdk" "element-web" "element-desktop" "compound-web"; do
         pushd "$SCHILDI_ROOT/$repo" > /dev/null
         "$@"
         popd > /dev/null

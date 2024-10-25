@@ -88,6 +88,7 @@
   --cpd-color-gray-200: #212121;
   --cpd-color-gray-100: #171717;
   --cpd-color-theme-bg: #171717;
+  --cpd-color-tooltip-bg: #424242;
 }
 
 .cpd-theme-light.cpd-theme-light {
@@ -171,4 +172,5 @@
   --cpd-color-gray-200: #f5f5f5;
   --cpd-color-gray-100: #fafafa;
   --cpd-color-theme-bg: #ffffff;
+  --cpd-color-tooltip-bg: #f5f5f5;
 }

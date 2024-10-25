@@ -10,3 +10,6 @@
 [submodule "element-desktop"]
 	path = element-desktop
 	url = https://github.com/SchildiChat/element-desktop.git
+[submodule "compound-web"]
+	path = compound-web
+	url = https://github.com/SchildiChat/compound-web.git

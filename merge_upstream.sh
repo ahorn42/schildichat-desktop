@@ -56,4 +56,7 @@ forall_repos commit_if_dirty "Automatic setup commit"
 
 ./apply_patches.sh
 
+compound_web_version=`cat matrix-react-sdk/package.json|grep compound-web|sed 's|.*: \"\(.*\)",|\1|;s|\^||'`
+echo "TODO: merge compound web at $compound_web_version"
+
 popd > /dev/null
