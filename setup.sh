@@ -45,3 +45,13 @@ popd
 
 # CSS overrides
 cp res/css/* matrix-react-sdk/res/css/
+
+# Ensure appropriate .gitignore to avoid unnecessary dirty repos
+# when re-running setup. merge_upstream.sh will include this into the
+# "Automatic setup commit".
+if grep -q res/css/sc- matrix-react-sdk/.gitignore; then
+    echo "Skip updating .gitignore, already looks ok"
+else
+    echo "Updating .gitignore"
+    echo -e "\nres/css/sc-*.css" >> matrix-react-sdk/.gitignore
+fi

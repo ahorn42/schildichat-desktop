@@ -218,6 +218,7 @@ clean:
 	rm -rf element-web/dist
 	rm -rf local-pkgbuild
 	rm -f bom.lock
+	rm -f matrix-react-sdk/res/css/sc-cpd-overrides.css
 
 undo_setup:
 	rm -rf element-desktop/node_modules element-web/node_modules matrix-react-sdk/node_modules matrix-js-sdk/node_modules i18n-helper/node_modules element-desktop/.hak
