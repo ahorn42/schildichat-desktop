@@ -6,6 +6,7 @@ Note that this list may be incomplete or outdated.
 ## General UI
 
 - Schildi theme
+- Some changed settings defaults
 
 
 ## Chat overview ("room list")

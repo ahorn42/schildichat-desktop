@@ -1,0 +1,25 @@
+From 62c1cc4f19b287e34b4c09767765f48ef44bf715 Mon Sep 17 00:00:00 2001
+From: SpiritCroc <dev@spiritcroc.de>
+Date: Sun, 27 Oct 2024 19:24:26 +0100
+Subject: Enable chat previews by default
+
+---
+ src/stores/room-list/ListLayout.ts | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/stores/room-list/ListLayout.ts b/src/stores/room-list/ListLayout.ts
+index 275b6d330b..3a188451e7 100644
+--- a/src/stores/room-list/ListLayout.ts
++++ b/src/stores/room-list/ListLayout.ts
+@@ -18,7 +18,7 @@ interface ISerializedListLayout {
+ 
+ export class ListLayout {
+     private _n = 0;
+-    private _previews = false;
++    private _previews = true;
+     private _collapsed = false;
+ 
+     public constructor(public readonly tagId: TagID) {
+-- 
+2.47.0
+
