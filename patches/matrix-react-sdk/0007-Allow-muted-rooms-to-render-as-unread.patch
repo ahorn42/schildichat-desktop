@@ -1,4 +1,4 @@
-From abb8d035c60a8f682a17afb7f1bd15c162a60a83 Mon Sep 17 00:00:00 2001
+From d91b5c4562a35251927f52faac41ae5214f2d452 Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Fri, 10 May 2024 18:58:32 +0200
 Subject: Allow muted rooms to render as unread
