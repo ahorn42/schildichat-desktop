@@ -49,6 +49,14 @@ forelement_repos() {
     done
 }
 
+for_main_repos() {
+    for repo in "matrix-js-sdk" "element-web" "element-desktop"; do
+        pushd "$SCHILDI_ROOT/$repo" > /dev/null
+        "$@"
+        popd > /dev/null
+    done
+}
+
 ensure_yes() {
     read -e -p "$1 [y/N] " choice
 
