@@ -16,18 +16,9 @@ $yarn link
 $yarn install
 popd
 
-pushd matrix-react-sdk
-$yarn link matrix-js-sdk
-$yarn link @vector-im/compound-web
-$yarn unlink &>/dev/null || true
-$yarn link
-$yarn install
-popd
-
 pushd element-web
 $yarn link matrix-js-sdk
 $yarn link @vector-im/compound-web
-$yarn link matrix-react-sdk
 $yarn install
 popd
 
@@ -44,14 +35,14 @@ $yarn install
 popd
 
 # CSS overrides
-cp res/css/* matrix-react-sdk/res/css/
+cp res/css/* element-web/res/css/
 
 # Ensure appropriate .gitignore to avoid unnecessary dirty repos
 # when re-running setup. merge_upstream.sh will include this into the
 # "Automatic setup commit".
-if grep -q res/css/sc- matrix-react-sdk/.gitignore; then
+if grep -q res/css/sc- element-web/.gitignore; then
     echo "Skip updating .gitignore, already looks ok"
 else
     echo "Updating .gitignore"
-    echo -e "\nres/css/sc-*.css" >> matrix-react-sdk/.gitignore
+    echo -e "\nres/css/sc-*.css" >> element-web/.gitignore
 fi

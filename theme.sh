@@ -6,7 +6,7 @@ shopt -s globstar
 mydir="$(dirname "$(realpath "$0")")"
 automatic_commit="$1"
 
-pushd "$mydir/matrix-react-sdk" > /dev/null
+pushd "$mydir/element-web" > /dev/null
 
 if [[ "$automatic_commit" == [Yy]* ]]; then
     # Require clean git state

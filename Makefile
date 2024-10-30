@@ -202,7 +202,7 @@ linux-container-release: container-debian-based-release container-rpm-release
 container-local-pkgbuild: container-build-debian
 	$(CONTAINER_ENGINE) run --rm -ti -v $(PWD):/project --security-opt seccomp=unconfined --security-opt label=disable $(CONTAINER_IMAGE_DEBIAN):latest make local-pkgbuild
 
-bom.lock: element-desktop/yarn.lock element-web/yarn.lock matrix-js-sdk/yarn.lock matrix-react-sdk/yarn.lock
+bom.lock: element-desktop/yarn.lock element-web/yarn.lock matrix-js-sdk/yarn.lock
 	./build-bom.sh
 bom: bom.lock
 
@@ -211,17 +211,16 @@ fix_yarn_cache:
 
 clean:
 	$(YARN) --cwd matrix-js-sdk clean
-	$(YARN) --cwd matrix-react-sdk clean
 	$(YARN) --cwd element-web clean
 	$(YARN) --cwd element-desktop clean
 	rm -f element-desktop/webapp || true
 	rm -rf element-web/dist
 	rm -rf local-pkgbuild
 	rm -f bom.lock
-	rm -f matrix-react-sdk/res/css/sc-cpd-overrides.css
+	rm -f element-web/res/css/sc-cpd-overrides.css
 
 undo_setup:
-	rm -rf element-desktop/node_modules element-web/node_modules matrix-react-sdk/node_modules matrix-js-sdk/node_modules i18n-helper/node_modules element-desktop/.hak
+	rm -rf element-desktop/node_modules element-web/node_modules matrix-js-sdk/node_modules i18n-helper/node_modules element-desktop/.hak
 
 fixup: undo_setup fix_yarn_cache
 	make setup

@@ -1,4 +1,4 @@
-From e5431bd8f8beec8fae6233fdfeeb795c06ce522c Mon Sep 17 00:00:00 2001
+From 1a73e666d193a583aa025fb75a9afdf59f1d36fa Mon Sep 17 00:00:00 2001
 From: su-ex <codeworks@supercable.onl>
 Date: Sun, 26 May 2024 10:43:36 +0200
 Subject: Bring back showSpaceDMBadges setting, force-enabled for now
@@ -12,7 +12,7 @@ Co-authored-by: SpiritCroc <dev@spiritcroc.de>
  2 files changed, 30 insertions(+)
 
 diff --git a/src/settings/Settings.tsx b/src/settings/Settings.tsx
-index 2e475871fa..43eb44fa3a 100644
+index ae4b0ea644..12d9965cf1 100644
 --- a/src/settings/Settings.tsx
 +++ b/src/settings/Settings.tsx
 @@ -199,6 +199,11 @@ export const SETTINGS: { [setting: string]: ISetting } = {

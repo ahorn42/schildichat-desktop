@@ -45,10 +45,6 @@ pushd "matrix-js-sdk" > /dev/null
 git checkout "$current_mxjssdk_tag" -B "$sc_branch_name"
 popd > /dev/null
 
-pushd "matrix-react-sdk" > /dev/null
-git checkout "$current_mxreactsdk_tag" -B "$sc_branch_name"
-popd > /dev/null
-
 # Refresh environment
 make clean
 make setup
@@ -56,7 +52,7 @@ forall_repos commit_if_dirty "Automatic setup commit"
 
 ./apply_patches.sh
 
-compound_web_version=`cat matrix-react-sdk/package.json|grep compound-web|sed 's|.*: \"\(.*\)",|\1|;s|\^||'`
+compound_web_version=`cat element-web/package.json|grep compound-web|sed 's|.*: \"\(.*\)",|\1|;s|\^||'`
 echo "TODO: merge compound web at $compound_web_version"
 
 popd > /dev/null

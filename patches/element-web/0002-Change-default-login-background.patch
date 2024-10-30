@@ -1,4 +1,4 @@
-From df9cbf4de43a3f8a5d4a539ab21c63230af629ea Mon Sep 17 00:00:00 2001
+From b3b4e755efb1851b4790cdedf230cf85f64d775d Mon Sep 17 00:00:00 2001
 From: su-ex <codeworks@supercable.onl>
 Date: Sun, 29 Nov 2020 23:30:59 +0100
 Subject: Change default login background
@@ -22103,10 +22103,10 @@ literal 0
 HcmV?d00001
 
 diff --git a/src/components/views/auth/VectorAuthPage.tsx b/src/components/views/auth/VectorAuthPage.tsx
-index 6641f94133..2053903c03 100644
+index 969cc560a3..4636cfe808 100644
 --- a/src/components/views/auth/VectorAuthPage.tsx
 +++ b/src/components/views/auth/VectorAuthPage.tsx
-@@ -18,7 +18,7 @@ export default class VectorAuthPage extends React.PureComponent {
+@@ -18,7 +18,7 @@ export default class VectorAuthPage extends React.PureComponent<React.PropsWithC
          if (VectorAuthPage.welcomeBackgroundUrl) return VectorAuthPage.welcomeBackgroundUrl;
  
          const brandingConfig = SdkConfig.getObject("branding");

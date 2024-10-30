@@ -5,8 +5,6 @@ cat element-web/yarn.lock >> bom.lock
 echo "" >> bom.lock
 cat matrix-js-sdk/yarn.lock >> bom.lock
 echo "" >> bom.lock
-cat matrix-react-sdk/yarn.lock >> bom.lock
-echo "" >> bom.lock
 
 # matrix-seshat
 cat << EOF >> bom.lock

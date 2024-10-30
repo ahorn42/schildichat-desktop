@@ -21,14 +21,12 @@ get_branch_of() {
 }
 
 b_js=`get_branch_of matrix-js-sdk`
-b_react=`get_branch_of matrix-react-sdk`
 b_web=`get_branch_of element-web`
 b_desktop=`get_branch_of element-desktop`
 
-if [ "$b_js" != "$b_react" ] || [ "$b_react" != "$b_web" ] || [ "$b_web" != "$b_desktop" ]; then
+if [ "$b_js" != "$b_web" ] || [ "$b_web" != "$b_desktop" ]; then
     echo "Detected branch name mismatch!"
     echo "js-sdk: $b_js"
-    echo "react-sdk: $b_react"
     echo "element-web: $b_web"
     echo "element-desktop: $b_desktop"
     exit 1

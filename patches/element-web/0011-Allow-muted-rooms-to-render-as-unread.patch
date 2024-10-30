@@ -1,4 +1,4 @@
-From d91b5c4562a35251927f52faac41ae5214f2d452 Mon Sep 17 00:00:00 2001
+From ad6ae2391b4e9ffafcdfd9a9cd369e77714f8e92 Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Fri, 10 May 2024 18:58:32 +0200
 Subject: Allow muted rooms to render as unread
@@ -8,7 +8,7 @@ Subject: Allow muted rooms to render as unread
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/src/RoomNotifs.ts b/src/RoomNotifs.ts
-index cc027c9682..c4c31a51cb 100644
+index 7c281d0d2d..f06be85437 100644
 --- a/src/RoomNotifs.ts
 +++ b/src/RoomNotifs.ts
 @@ -255,7 +255,7 @@ export function determineUnreadState(

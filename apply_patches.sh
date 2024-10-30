@@ -16,10 +16,8 @@ pushd "$mydir" > /dev/null
 source ./merge_helpers.sh
 
 # Apply our patches
-print_section "Apply patches to matrix-js-sdk"
-apply_patches matrix-js-sdk
-print_section "Apply patches to matrix-react-sdk"
-apply_patches matrix-react-sdk
+#print_section "Apply patches to matrix-js-sdk"
+#apply_patches matrix-js-sdk
 print_section "Apply patches to element-web"
 apply_patches element-web
 print_section "Apply patches to element-desktop"

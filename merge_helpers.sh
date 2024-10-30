@@ -21,7 +21,7 @@ add_upstream() {
     if echo "$sc_remote" | grep -q matrix-js-sdk; then
         # matrix.org repo
         local upstream_remote="$(echo "$sc_remote" | sed 's|SchildiChat|matrix-org|')"
-    elif echo "$sc_remote" | grep -q "element\\|matrix-react-sdk\\|compound-web"; then
+    elif echo "$sc_remote" | grep -q "element\\|compound-web"; then
         # vector-im repo
         local upstream_remote="$(echo "$sc_remote" | sed 's|SchildiChat|element-hq|')"
     else
@@ -34,7 +34,7 @@ add_upstream() {
 }
 
 forall_repos() {
-    for repo in "matrix-js-sdk" "matrix-react-sdk" "element-web" "element-desktop" "compound-web"; do
+    for repo in "matrix-js-sdk" "element-web" "element-desktop" "compound-web"; do
         pushd "$SCHILDI_ROOT/$repo" > /dev/null
         "$@"
         popd > /dev/null
@@ -99,12 +99,7 @@ automatic_i18n_reversion() {
     get_current_upstream_tag
 
     local current_mxjssdk_tag
-    local current_mxreactsdk_tag
     get_current_mxsdk_tags
-
-    pushd "$SCHILDI_ROOT/matrix-react-sdk" > /dev/null
-    revert_i18n_changes "$i18n_path" "$current_mxreactsdk_tag" "$skip_commit"
-    popd > /dev/null
 
     pushd "$SCHILDI_ROOT/element-web" > /dev/null
     revert_i18n_changes "$i18n_path" "$current_upstream_tag" "$skip_commit"
@@ -116,13 +111,6 @@ automatic_i18n_reversion() {
 }
 
 automatic_i18n_adjustment() {
-    # matrix-react-sdk
-    pushd "$SCHILDI_ROOT/matrix-react-sdk" > /dev/null
-    $yarn i18n
-    node "$i18n_helper_path" "$SCHILDI_ROOT/matrix-react-sdk/$i18n_path" "$i18n_overlay_path/matrix-react-sdk"
-    apply_i18n_changes "$i18n_path"
-    popd > /dev/null
-
     # element-web
     pushd "$SCHILDI_ROOT/element-web" > /dev/null
     $yarn i18n
@@ -248,7 +236,6 @@ get_current_upstream_tag() {
 }
 
 get_current_mxsdk_tags() {
-    current_mxreactsdk_tag="v$(cat "$SCHILDI_ROOT/element-web/package.json" | jq '.dependencies["matrix-react-sdk"]' -r)"
     current_mxjssdk_tag="v$(cat "$SCHILDI_ROOT/element-web/package.json" | jq '.dependencies["matrix-js-sdk"]' -r)"
 }
 

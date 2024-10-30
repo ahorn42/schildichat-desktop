@@ -85,15 +85,14 @@ See [here](RELEASE.md).
 
 ## Building SchildiChat Web/Desktop
 
-This particular repo is a wrapper project for element-desktop, element-web, matrix-react-sdk and matrix-js-sdk. It's the recommended starting point to build SchildiChat for Web **and** Desktop.
+This particular repo is a wrapper project for element-desktop, element-web, and matrix-js-sdk. It's the recommended starting point to build SchildiChat for Web **and** Desktop.
 
 The `master` branch contains the latest release.  
 Development happens in the `sc` branch, which might be **broken at any time**!
 
 <pre><code><b>schildichat-desktop</b> <i>&lt;-- this repo</i> (recommended starting point to build SchildiChat for Web <b>and</b> Desktop)
 |-- <a href="https://github.com/SchildiChat/element-desktop">element-desktop</a> (electron wrapper)
-|-- <a href="https://github.com/SchildiChat/element-web">element-web</a> ("skin" for matrix-react-sdk)
-|-- <a href="https://github.com/SchildiChat/matrix-react-sdk">matrix-react-sdk</a> (most of the development happens here)
+|-- <a href="https://github.com/SchildiChat/element-web">element-web</a> (most of the development happens here)
 `-- <a href="https://github.com/SchildiChat/matrix-js-sdk">matrix-js-sdk</a> (Matrix client js sdk)
 </code></pre>
 

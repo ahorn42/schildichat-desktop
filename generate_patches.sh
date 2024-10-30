@@ -24,8 +24,10 @@ persist_patches() {
         echo "Creating new patch dir $patch_dir..."
         mkdir "$patch_dir"
     fi
-    echo "Creating new patches"
-    git format-patch -k upstream/master.. -o "$patch_dir"
+    # Assume we forked from a tag starting with 'v' (our own tags start with sc_)
+    local fork_point=`git describe --tags --match 'v*'| sed 's|-[^-]*-[^-]*$||'`
+    echo "Creating new patches from $fork_point"
+    git format-patch -k "$fork_point".. -o "$patch_dir"
     echo "Clearing automated commits from patches"
     find "$patch_dir" -name "*-Automatic-package.json-adjustment.patch" -exec rm {} \;
     find "$patch_dir" -name "*-Automatic-icon-update.patch" -exec rm {} \;
@@ -37,7 +39,6 @@ persist_patches() {
 
 persist_patches element-desktop
 persist_patches element-web
-persist_patches matrix-react-sdk
-persist_patches matrix-js-sdk
+#persist_patches matrix-js-sdk
 
 popd > /dev/null
