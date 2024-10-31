@@ -1,0 +1,26 @@
+From df4aa42a9915f1fbf6a70e84b01913dd41e2ac0e Mon Sep 17 00:00:00 2001
+From: SpiritCroc <dev@spiritcroc.de>
+Date: Thu, 31 Oct 2024 17:33:32 +0100
+Subject: [HACK] Fix captions in bubble layout
+
+Image height of 100% combined with overflow-y: hidden was causing
+caption to be invisible in bubble layout.
+---
+ res/css/views/rooms/_EventBubbleTile.pcss | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/res/css/views/rooms/_EventBubbleTile.pcss b/res/css/views/rooms/_EventBubbleTile.pcss
+index a5f5480010..fbb1ad2e1b 100644
+--- a/res/css/views/rooms/_EventBubbleTile.pcss
++++ b/res/css/views/rooms/_EventBubbleTile.pcss
+@@ -336,7 +336,6 @@ Please see LICENSE files in the repository root for full details.
+ 
+         .mx_MImageBody {
+             width: 100%;
+-            height: 100%;
+ 
+             .mx_MImageBody_thumbnail.mx_MImageBody_thumbnail--blurhash {
+                 position: unset;
+-- 
+2.47.0
+
