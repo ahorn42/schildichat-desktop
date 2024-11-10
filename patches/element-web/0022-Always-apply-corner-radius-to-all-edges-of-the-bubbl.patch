@@ -1,4 +1,4 @@
-From 6c031a5258cc31485b889b5487d5e44ebac2c8de Mon Sep 17 00:00:00 2001
+From cb1170ababf572e6caf211e3ed865b693ead7b61 Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Sun, 13 Oct 2024 13:26:16 +0200
 Subject: Always apply corner radius to all edges of the bubble
