@@ -1,4 +1,4 @@
-From 67290a6973214d7264bed8fa5afc75ca10dd87a2 Mon Sep 17 00:00:00 2001
+From 9cb9230125510ae19454df7aa9e951366c1318ed Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Sun, 13 Oct 2024 13:53:07 +0200
 Subject: Always show timestamps by default
