@@ -26,3 +26,10 @@ Note that this list may be incomplete or outdated.
 
 - Allow sending freeform reactions
 - Less restrictive width limit for rendering text reactions
+
+
+## Non-core community contributions
+
+Following features and changes are community-maintained, i.e. do not embody core SchildiChat features and may be dropped in future releases in case they cause a notable maintenance burden.
+
+- [Improved IRC layout](https://github.com/SchildiChat/schildichat-desktop/pull/269)
