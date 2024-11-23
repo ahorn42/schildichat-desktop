@@ -1,17 +1,17 @@
-From 7ec0394f9adabfd60d0bb94bcb05681870d78226 Mon Sep 17 00:00:00 2001
+From faaf99c6ce2111faeeaa3100cd076a51b711d95b Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Sun, 27 Oct 2024 19:55:30 +0100
 Subject: Stronger login background to ensure contrast of our icon with our bg
 
 ---
- src/components/views/auth/VectorAuthPage.tsx | 2 +-
+ src/components/views/auth/AuthPage.tsx | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/src/components/views/auth/VectorAuthPage.tsx b/src/components/views/auth/VectorAuthPage.tsx
-index 4636cfe808..05dcdbbbf7 100644
---- a/src/components/views/auth/VectorAuthPage.tsx
-+++ b/src/components/views/auth/VectorAuthPage.tsx
-@@ -56,7 +56,7 @@ export default class VectorAuthPage extends React.PureComponent<React.PropsWithC
+diff --git a/src/components/views/auth/AuthPage.tsx b/src/components/views/auth/AuthPage.tsx
+index 032744413f..71bf8ae6d6 100644
+--- a/src/components/views/auth/AuthPage.tsx
++++ b/src/components/views/auth/AuthPage.tsx
+@@ -58,7 +58,7 @@ export default class AuthPage extends React.PureComponent<React.PropsWithChildre
          const modalContentStyle: React.CSSProperties = {
              display: "flex",
              zIndex: 1,

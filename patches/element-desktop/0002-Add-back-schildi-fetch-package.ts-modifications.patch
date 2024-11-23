@@ -1,4 +1,4 @@
-From 113e92563afce88425b4b0aaa6434533a34d2d76 Mon Sep 17 00:00:00 2001
+From 1be2423147ba91f51bf2cc0437b3652c5a4e0c00 Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Sat, 2 Dec 2023 12:57:26 +0100
 Subject: Add back schildi fetch-package.ts modifications
@@ -8,10 +8,10 @@ Subject: Add back schildi fetch-package.ts modifications
  1 file changed, 10 insertions(+), 4 deletions(-)
 
 diff --git a/scripts/fetch-package.ts b/scripts/fetch-package.ts
-index e32dcbb..5ed781f 100644
+index 7282945..4be7ab0 100644
 --- a/scripts/fetch-package.ts
 +++ b/scripts/fetch-package.ts
-@@ -55,6 +55,7 @@ async function main(): Promise<number | undefined> {
+@@ -54,6 +54,7 @@ async function main(): Promise<number | undefined> {
      let filename: string | undefined;
      let url: string | undefined;
      let setVersion = false;
@@ -19,7 +19,7 @@ index e32dcbb..5ed781f 100644
  
      while (process.argv.length > 2) {
          switch (process.argv[2]) {
-@@ -83,7 +84,9 @@ async function main(): Promise<number | undefined> {
+@@ -82,7 +83,9 @@ async function main(): Promise<number | undefined> {
          process.argv.shift();
      }
  
@@ -30,7 +30,7 @@ index e32dcbb..5ed781f 100644
          targetVersion = "v" + riotDesktopPackageJson.version;
      } else if (targetVersion !== "develop") {
          setVersion = true; // version was specified
-@@ -93,7 +96,7 @@ async function main(): Promise<number | undefined> {
+@@ -92,7 +95,7 @@ async function main(): Promise<number | undefined> {
          filename = "develop.tar.gz";
          url = DEVELOP_TGZ_URL;
          verify = false; // develop builds aren't signed
@@ -39,7 +39,7 @@ index e32dcbb..5ed781f 100644
          filename = targetVersion.substring(targetVersion.lastIndexOf("/") + 1);
          url = targetVersion;
          verify = false; // manually verified
-@@ -145,12 +148,15 @@ async function main(): Promise<number | undefined> {
+@@ -146,12 +149,15 @@ async function main(): Promise<number | undefined> {
      }
  
      let haveDeploy = false;

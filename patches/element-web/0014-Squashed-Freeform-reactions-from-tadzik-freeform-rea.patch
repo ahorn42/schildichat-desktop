@@ -1,4 +1,4 @@
-From aadba9f508f6227192d7e4409f10c5996c9b713b Mon Sep 17 00:00:00 2001
+From 8f81368ec09b41f996955b8a8fabcc594c194194 Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Wed, 29 May 2024 19:32:42 +0200
 Subject: Squashed: Freeform reactions from tadzik/freeform-reactions-upstream
@@ -118,10 +118,10 @@ index 4806ad4216..7d4a4353e2 100644
                                  <Preview emoji={this.state.previewEmoji} />
                              ) : (
 diff --git a/src/components/views/emojipicker/ReactionPicker.tsx b/src/components/views/emojipicker/ReactionPicker.tsx
-index 2c2eb442a0..62bfd2ea0f 100644
+index b62df99e25..8291a38dc9 100644
 --- a/src/components/views/emojipicker/ReactionPicker.tsx
 +++ b/src/components/views/emojipicker/ReactionPicker.tsx
-@@ -123,6 +123,7 @@ class ReactionPicker extends React.Component<IProps, IState> {
+@@ -126,6 +126,7 @@ class ReactionPicker extends React.Component<IProps, IState> {
      public render(): React.ReactNode {
          return (
              <EmojiPicker

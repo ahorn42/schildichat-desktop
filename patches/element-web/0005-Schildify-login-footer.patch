@@ -1,25 +1,25 @@
-From 29f48d9d9c07f0ad9b46a235b7b47240a6763a84 Mon Sep 17 00:00:00 2001
+From f469bd05375c6b4c1b419cf07b4a832511a79a4e Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Sun, 27 Oct 2024 20:07:30 +0100
 Subject: Schildify login footer
 
 ---
- src/components/views/auth/VectorAuthFooter.tsx | 7 ++++---
- 1 file changed, 4 insertions(+), 3 deletions(-)
+ src/components/views/auth/AuthFooter.tsx | 4 ++++
+ 1 file changed, 4 insertions(+)
 
-diff --git a/src/components/views/auth/VectorAuthFooter.tsx b/src/components/views/auth/VectorAuthFooter.tsx
-index 234c6b127b..44d41004a0 100644
---- a/src/components/views/auth/VectorAuthFooter.tsx
-+++ b/src/components/views/auth/VectorAuthFooter.tsx
-@@ -14,9 +14,10 @@ import { _t } from "../../../languageHandler";
- const VectorAuthFooter = (): ReactElement => {
+diff --git a/src/components/views/auth/AuthFooter.tsx b/src/components/views/auth/AuthFooter.tsx
+index 8d27a04c83..b9ff8e8416 100644
+--- a/src/components/views/auth/AuthFooter.tsx
++++ b/src/components/views/auth/AuthFooter.tsx
+@@ -15,9 +15,13 @@ import { _t } from "../../../languageHandler";
+ const AuthFooter = (): ReactElement => {
      const brandingConfig = SdkConfig.getObject("branding");
      const links = brandingConfig?.get("auth_footer_links") ?? [
--        { text: "Blog", url: "https://element.io/blog" },
--        { text: "Twitter", url: "https://twitter.com/element_hq" },
--        { text: "GitHub", url: "https://github.com/element-hq/element-web" },
-+        //{ text: "Blog", url: "https://element.io/blog" },
-+        //{ text: "Twitter", url: "https://twitter.com/element_hq" },
++        /*
+         { text: "Blog", url: "https://element.io/blog" },
+         { text: "Twitter", url: "https://twitter.com/element_hq" },
+         { text: "GitHub", url: "https://github.com/element-hq/element-web" },
++        */
 +        { text: "About", url: "https://schildi.chat" },
 +        { text: "GitHub", url: "https://github.com/schildichat/schildichat-desktop" },
      ];
