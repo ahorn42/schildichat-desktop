@@ -5,7 +5,7 @@
 On a Linux machine with podman:
 
 ```
-make container-release-linux
+make linux-container-release
 ```
 
 ## Build Windows releases
