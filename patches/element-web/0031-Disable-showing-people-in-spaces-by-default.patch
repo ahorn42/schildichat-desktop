@@ -1,0 +1,39 @@
+From f45d0c6db3465497338b4bf87c65b8205af28c42 Mon Sep 17 00:00:00 2001
+From: SpiritCroc <dev@spiritcroc.de>
+Date: Sat, 30 Nov 2024 19:42:44 +0100
+Subject: Disable showing people in spaces by default
+
+---
+ src/settings/Settings.tsx                            | 2 +-
+ src/stores/room-list/filters/SpaceFilterCondition.ts | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/settings/Settings.tsx b/src/settings/Settings.tsx
+index 51404c88d4..c4c8e719f9 100644
+--- a/src/settings/Settings.tsx
++++ b/src/settings/Settings.tsx
+@@ -1073,7 +1073,7 @@ export const SETTINGS: { [setting: string]: ISetting } = {
+     },
+     "Spaces.showPeopleInSpace": {
+         supportedLevels: [SettingLevel.ROOM_ACCOUNT],
+-        default: true,
++        default: false,
+     },
+     "developerMode": {
+         displayName: _td("devtools|developer_mode"),
+diff --git a/src/stores/room-list/filters/SpaceFilterCondition.ts b/src/stores/room-list/filters/SpaceFilterCondition.ts
+index 8f652a35fb..da02328e89 100644
+--- a/src/stores/room-list/filters/SpaceFilterCondition.ts
++++ b/src/stores/room-list/filters/SpaceFilterCondition.ts
+@@ -25,7 +25,7 @@ import SettingsStore from "../../../settings/SettingsStore";
+ export class SpaceFilterCondition extends EventEmitter implements IFilterCondition, IDestroyable {
+     private roomIds = new Set<string>();
+     private userIds = new Set<string>();
+-    private showPeopleInSpace = true;
++    private showPeopleInSpace = false;
+     private space: SpaceKey = MetaSpace.Home;
+ 
+     public isVisible(room: Room): boolean {
+-- 
+2.47.0
+
