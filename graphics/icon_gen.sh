@@ -57,6 +57,7 @@ done
 
 cp "$mydir/ic_launcher_sc.svg" "$repo_dir/res/themes/element/img/logos/element-logo.svg"
 
+export_square 320 "$mydir/ic_launcher_sc.svg" "$repo_dir/res/themes/element/img/logos/element-app-logo.png"
 
 repo_dir="$SCHILDI_ROOT/element-desktop"
 base_out="$repo_dir/res/img"
