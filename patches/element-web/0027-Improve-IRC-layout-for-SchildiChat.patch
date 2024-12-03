@@ -1,4 +1,4 @@
-From e2b0f154492779fa8df8abefc12c4bbe273994e4 Mon Sep 17 00:00:00 2001
+From a854e513521055b34200b1ea5f431614a936ea12 Mon Sep 17 00:00:00 2001
 From: Suguru Hirahara <luixxiul@users.noreply.github.com>
 Date: Thu, 31 Oct 2024 13:44:20 -0400
 Subject: Improve IRC layout for SchildiChat
@@ -54,7 +54,7 @@ index c13f819439..4f42040606 100644
          margin-top: $spacing-8;
      }
 diff --git a/res/css/views/rooms/_EventTile.pcss b/res/css/views/rooms/_EventTile.pcss
-index 311e059166..ecd1030749 100644
+index d405381db1..badc2399fa 100644
 --- a/res/css/views/rooms/_EventTile.pcss
 +++ b/res/css/views/rooms/_EventTile.pcss
 @@ -1,5 +1,6 @@

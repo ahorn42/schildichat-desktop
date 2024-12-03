@@ -1,4 +1,4 @@
-From f45d0c6db3465497338b4bf87c65b8205af28c42 Mon Sep 17 00:00:00 2001
+From 0d4814704ac86751ca9022672793e0672466232d Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Sat, 30 Nov 2024 19:42:44 +0100
 Subject: Disable showing people in spaces by default

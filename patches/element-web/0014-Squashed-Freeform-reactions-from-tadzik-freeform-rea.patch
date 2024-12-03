@@ -1,4 +1,4 @@
-From 8f81368ec09b41f996955b8a8fabcc594c194194 Mon Sep 17 00:00:00 2001
+From 842eb33b63bd69bf5714b10975f9e2fecc72ea66 Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Wed, 29 May 2024 19:32:42 +0200
 Subject: Squashed: Freeform reactions from tadzik/freeform-reactions-upstream
@@ -71,7 +71,7 @@ Date:   Tue Aug 17 11:29:22 2021 +0200
  2 files changed, 16 insertions(+)
 
 diff --git a/src/components/views/emojipicker/EmojiPicker.tsx b/src/components/views/emojipicker/EmojiPicker.tsx
-index 4806ad4216..7d4a4353e2 100644
+index e2470d188d..868f9b3d7c 100644
 --- a/src/components/views/emojipicker/EmojiPicker.tsx
 +++ b/src/components/views/emojipicker/EmojiPicker.tsx
 @@ -17,6 +17,7 @@ import Header from "./Header";
@@ -82,7 +82,7 @@ index 4806ad4216..7d4a4353e2 100644
  import Category, { CategoryKey, ICategory } from "./Category";
  import { filterBoolean } from "../../../utils/arrays";
  import {
-@@ -37,6 +38,7 @@ export const EMOJIS_PER_ROW = 8;
+@@ -36,6 +37,7 @@ export const EMOJIS_PER_ROW = 8;
  const ZERO_WIDTH_JOINER = "\u200D";
  
  interface IProps {
@@ -90,7 +90,7 @@ index 4806ad4216..7d4a4353e2 100644
      selectedEmojis?: Set<string>;
      onChoose(unicode: string): boolean;
      onFinished(): void;
-@@ -341,6 +343,10 @@ class EmojiPicker extends React.Component<IProps, IState> {
+@@ -337,6 +339,10 @@ class EmojiPicker extends React.Component<IProps, IState> {
          }
      };
  
@@ -101,7 +101,7 @@ index 4806ad4216..7d4a4353e2 100644
      private static categoryHeightForEmojiCount(count: number): number {
          if (count === 0) {
              return 0;
-@@ -396,6 +402,15 @@ class EmojiPicker extends React.Component<IProps, IState> {
+@@ -392,6 +398,15 @@ class EmojiPicker extends React.Component<IProps, IState> {
                                      return categoryElement;
                                  })}
                              </AutoHideScrollbar>
