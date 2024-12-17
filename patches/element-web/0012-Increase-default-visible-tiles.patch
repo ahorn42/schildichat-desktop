@@ -1,4 +1,4 @@
-From 6c5419a256020fda6907fa770ae1fc8c48a96849 Mon Sep 17 00:00:00 2001
+From 9fbca521ae0e6bc4f2b7012dea3c9c04afde2361 Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Sun, 30 Aug 2020 15:33:01 +0200
 Subject: Increase default visible tiles
@@ -21,5 +21,5 @@ index ff60309e08..275b6d330b 100644
  
      public tilesWithPadding(n: number, paddingPx: number): number {
 -- 
-2.47.0
+2.47.1
 

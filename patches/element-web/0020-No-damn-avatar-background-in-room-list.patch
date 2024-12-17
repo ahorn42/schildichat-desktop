@@ -1,4 +1,4 @@
-From 2e304e4e139502133e58346b93dfce0dfdf95092 Mon Sep 17 00:00:00 2001
+From 2721ac99b3fcbfda270a5727436f8e6923f29b31 Mon Sep 17 00:00:00 2001
 From: su-ex <codeworks@supercable.onl>
 Date: Tue, 7 Sep 2021 19:41:52 +0200
 Subject: No damn avatar background in room list
@@ -22,5 +22,5 @@ index 32c75a936e..f420bdbc7b 100644
  
      const styles: CSSProperties = {};
 -- 
-2.47.0
+2.47.1
 

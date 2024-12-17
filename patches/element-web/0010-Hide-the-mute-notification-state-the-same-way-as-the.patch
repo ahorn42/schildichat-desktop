@@ -1,4 +1,4 @@
-From afc0686a92f5c16a6747d63a5450c0c8c63f9f68 Mon Sep 17 00:00:00 2001
+From ad81f3cdccc9c20e09ab4a816016f2387c6bb6a1 Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Wed, 17 Nov 2021 12:50:25 +0100
 Subject: Hide the "mute" notification state the same way as the other states
@@ -11,10 +11,10 @@ way.
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/src/components/views/rooms/RoomTile.tsx b/src/components/views/rooms/RoomTile.tsx
-index 8351c176ff..a12fb141b9 100644
+index 7953c5068d..42f7fabb8e 100644
 --- a/src/components/views/rooms/RoomTile.tsx
 +++ b/src/components/views/rooms/RoomTile.tsx
-@@ -305,7 +305,9 @@ export class RoomTile extends React.PureComponent<ClassProps, State> {
+@@ -300,7 +300,9 @@ class RoomTile extends React.PureComponent<Props, State> {
  
              // Only show the icon by default if the room is overridden to muted.
              // TODO: [FTUE Notifications] Probably need to detect global mute state
@@ -26,5 +26,5 @@ index 8351c176ff..a12fb141b9 100644
  
          return (
 -- 
-2.47.0
+2.47.1
 

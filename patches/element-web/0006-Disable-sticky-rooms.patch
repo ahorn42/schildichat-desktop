@@ -1,4 +1,4 @@
-From 72f5f3b18cd813fc3cdc4ff89131558738f8c551 Mon Sep 17 00:00:00 2001
+From cffec34134a4a49f0d3880f6ebcd2f4b570d9bab Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Tue, 18 Jan 2022 13:28:22 +0100
 Subject: Disable sticky rooms
@@ -25,5 +25,5 @@ index c3450d70cf..e296676149 100644
      }
  
 -- 
-2.47.0
+2.47.1
 

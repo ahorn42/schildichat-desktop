@@ -1,4 +1,4 @@
-From 9b0cba9a234d7f9329f9e6e8ad549a09a6455bf1 Mon Sep 17 00:00:00 2001
+From c92bef580d7ec6e62a6b845dc3f4159288f58777 Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Sun, 5 May 2024 10:12:17 +0200
 Subject: Bring back unified room list
@@ -16,7 +16,7 @@ Co-authored-by: su-ex <codeworks@supercable.onl>
  5 files changed, 83 insertions(+), 5 deletions(-)
 
 diff --git a/src/components/views/rooms/RoomList.tsx b/src/components/views/rooms/RoomList.tsx
-index 853bebc4fe..5af0c642bc 100644
+index f3bde66af9..f2446d3de8 100644
 --- a/src/components/views/rooms/RoomList.tsx
 +++ b/src/components/views/rooms/RoomList.tsx
 @@ -72,11 +72,13 @@ interface IState {
@@ -124,10 +124,10 @@ index 853bebc4fe..5af0c642bc 100644
                  (this.props.activeSpace === MetaSpace.Favourites && orderedTagId !== DefaultTagID.Favourite) ||
                  (this.props.activeSpace === MetaSpace.People && orderedTagId !== DefaultTagID.DM) ||
 diff --git a/src/settings/Settings.tsx b/src/settings/Settings.tsx
-index 1c27f03e88..ae4b0ea644 100644
+index 6cd5b15a51..4413cc5762 100644
 --- a/src/settings/Settings.tsx
 +++ b/src/settings/Settings.tsx
-@@ -192,6 +192,14 @@ export interface IFeature extends Omit<IBaseSetting<boolean>, "isFeature"> {
+@@ -183,6 +183,14 @@ export interface IFeature extends Omit<IBaseSetting<boolean>, "isFeature"> {
  export type ISetting = IBaseSetting | IFeature;
  
  export const SETTINGS: { [setting: string]: ISetting } = {
@@ -259,5 +259,5 @@ index 50cecda665..8efc2d040d 100644
      DefaultTagID.Conference,
      DefaultTagID.Untagged,
 -- 
-2.47.0
+2.47.1
 

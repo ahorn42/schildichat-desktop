@@ -1,4 +1,4 @@
-From a854e513521055b34200b1ea5f431614a936ea12 Mon Sep 17 00:00:00 2001
+From ab84e8553b9343de6c525a4bec8887afd2f0db43 Mon Sep 17 00:00:00 2001
 From: Suguru Hirahara <luixxiul@users.noreply.github.com>
 Date: Thu, 31 Oct 2024 13:44:20 -0400
 Subject: Improve IRC layout for SchildiChat
@@ -306,5 +306,5 @@ index ecf1c25716..de85238ca6 100644
      line-height: var(--line-height) !important;
  
 -- 
-2.47.0
+2.47.1
 

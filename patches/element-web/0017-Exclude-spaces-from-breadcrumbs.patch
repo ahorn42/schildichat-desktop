@@ -1,4 +1,4 @@
-From e7747d12316e0d30bc8d152d71e636742c65eb0e Mon Sep 17 00:00:00 2001
+From f2d5cbb7c31fc2a7ebd4a0f83c6e6c76b18c3668 Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Tue, 9 Aug 2022 09:32:19 +0200
 Subject: Exclude spaces from breadcrumbs
@@ -20,5 +20,5 @@ index 9859f24015..957b54286c 100644
          const rooms = (this.state.rooms || []).slice(); // cheap clone
          const msc3946ProcessDynamicPredecessor = SettingsStore.getValue("feature_dynamic_room_predecessors");
 -- 
-2.47.0
+2.47.1
 
