@@ -1,4 +1,4 @@
-From f2d5cbb7c31fc2a7ebd4a0f83c6e6c76b18c3668 Mon Sep 17 00:00:00 2001
+From fab0b51edab01ef34590c7e1fac4d3c0584eb20b Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Tue, 9 Aug 2022 09:32:19 +0200
 Subject: Exclude spaces from breadcrumbs

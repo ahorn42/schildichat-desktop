@@ -1,4 +1,4 @@
-From f3c8ecc03ed1922cd9c1e843a699309fb00e9bc1 Mon Sep 17 00:00:00 2001
+From 52ab9a20a207010912292f06466fbd30fedce1ed Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Thu, 17 Oct 2024 19:40:51 +0200
 Subject: Enable custom emote rendering by default

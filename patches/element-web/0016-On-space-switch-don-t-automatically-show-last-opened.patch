@@ -1,4 +1,4 @@
-From fd8e3a90d05471eeeab4de9a70feb0ab32276dd0 Mon Sep 17 00:00:00 2001
+From c1fd46c896b37095efb08343ef287bb449a991e9 Mon Sep 17 00:00:00 2001
 From: su-ex <codeworks@supercable.onl>
 Date: Thu, 30 May 2024 14:35:16 +0200
 Subject: On space switch don't automatically show last opened room
