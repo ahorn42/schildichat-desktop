@@ -1,4 +1,4 @@
-From fab0b51edab01ef34590c7e1fac4d3c0584eb20b Mon Sep 17 00:00:00 2001
+From df60ede5a07c6d13651844cd706ae63671684ffd Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Tue, 9 Aug 2022 09:32:19 +0200
 Subject: Exclude spaces from breadcrumbs
@@ -8,7 +8,7 @@ Subject: Exclude spaces from breadcrumbs
  1 file changed, 1 insertion(+)
 
 diff --git a/src/stores/BreadcrumbsStore.ts b/src/stores/BreadcrumbsStore.ts
-index 9859f24015..957b54286c 100644
+index c02d1181fe..1d9410f8e2 100644
 --- a/src/stores/BreadcrumbsStore.ts
 +++ b/src/stores/BreadcrumbsStore.ts
 @@ -137,6 +137,7 @@ export class BreadcrumbsStore extends AsyncStoreWithClient<IState> {
@@ -20,5 +20,5 @@ index 9859f24015..957b54286c 100644
          const rooms = (this.state.rooms || []).slice(); // cheap clone
          const msc3946ProcessDynamicPredecessor = SettingsStore.getValue("feature_dynamic_room_predecessors");
 -- 
-2.47.1
+2.48.1
 

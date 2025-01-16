@@ -1,4 +1,4 @@
-From a782b6ffab3588ef374e52bd68810f8fd236cab5 Mon Sep 17 00:00:00 2001
+From 3749bf8941ea426d395fd0c15742b235b5798e8e Mon Sep 17 00:00:00 2001
 From: su-ex <codeworks@supercable.onl>
 Date: Sat, 22 Apr 2023 12:15:18 +0200
 Subject: Allow reactions to take more space
@@ -8,7 +8,7 @@ Subject: Allow reactions to take more space
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/res/css/views/messages/_ReactionsRowButton.pcss b/res/css/views/messages/_ReactionsRowButton.pcss
-index dd9d7ddb47..9ebe95021e 100644
+index 917bcfbb84..75ec572c9e 100644
 --- a/res/css/views/messages/_ReactionsRowButton.pcss
 +++ b/res/css/views/messages/_ReactionsRowButton.pcss
 @@ -14,6 +14,7 @@ Please see LICENSE files in the repository root for full details.
@@ -28,5 +28,5 @@ index dd9d7ddb47..9ebe95021e 100644
          white-space: nowrap;
          text-overflow: ellipsis;
 -- 
-2.47.1
+2.48.1
 

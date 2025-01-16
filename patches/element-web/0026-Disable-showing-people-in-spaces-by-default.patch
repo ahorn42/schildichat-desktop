@@ -1,4 +1,4 @@
-From 64e3e5aeb6a61e44a8892254ed8970d718fcfac5 Mon Sep 17 00:00:00 2001
+From 8f4ca3a428317d5bfa478ab0ee72074dcb111366 Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Sat, 30 Nov 2024 19:42:44 +0100
 Subject: Disable showing people in spaces by default
@@ -9,10 +9,10 @@ Subject: Disable showing people in spaces by default
  2 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/src/settings/Settings.tsx b/src/settings/Settings.tsx
-index 8ef323e588..cecc5ebe0b 100644
+index 88d0548dc4..8ad5546afb 100644
 --- a/src/settings/Settings.tsx
 +++ b/src/settings/Settings.tsx
-@@ -1047,7 +1047,7 @@ export const SETTINGS: { [setting: string]: ISetting } = {
+@@ -1208,7 +1208,7 @@ export const SETTINGS: Settings = {
      },
      "Spaces.showPeopleInSpace": {
          supportedLevels: [SettingLevel.ROOM_ACCOUNT],
@@ -22,7 +22,7 @@ index 8ef323e588..cecc5ebe0b 100644
      "developerMode": {
          displayName: _td("devtools|developer_mode"),
 diff --git a/src/stores/room-list/filters/SpaceFilterCondition.ts b/src/stores/room-list/filters/SpaceFilterCondition.ts
-index 8f652a35fb..da02328e89 100644
+index 7c4316ff21..4ffc0e67bf 100644
 --- a/src/stores/room-list/filters/SpaceFilterCondition.ts
 +++ b/src/stores/room-list/filters/SpaceFilterCondition.ts
 @@ -25,7 +25,7 @@ import SettingsStore from "../../../settings/SettingsStore";
@@ -35,5 +35,5 @@ index 8f652a35fb..da02328e89 100644
  
      public isVisible(room: Room): boolean {
 -- 
-2.47.1
+2.48.1
 

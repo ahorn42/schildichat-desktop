@@ -1,4 +1,4 @@
-From c208ee73713f33642c78a26dece9fd3f144b24a7 Mon Sep 17 00:00:00 2001
+From a80b770c4ba54d653ab9249ce7af18908d0c577e Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Thu, 14 Dec 2023 10:32:10 +0100
 Subject: Don't preview reactions
@@ -8,7 +8,7 @@ Subject: Don't preview reactions
  1 file changed, 2 insertions(+)
 
 diff --git a/src/stores/room-list/MessagePreviewStore.ts b/src/stores/room-list/MessagePreviewStore.ts
-index 2577b2ba23..0df13f33a8 100644
+index 3f1614df70..29c71fcc69 100644
 --- a/src/stores/room-list/MessagePreviewStore.ts
 +++ b/src/stores/room-list/MessagePreviewStore.ts
 @@ -55,10 +55,12 @@ const PREVIEWS: Record<
@@ -25,5 +25,5 @@ index 2577b2ba23..0df13f33a8 100644
          isState: false,
          previewer: new PollStartEventPreview(),
 -- 
-2.47.1
+2.48.1
 

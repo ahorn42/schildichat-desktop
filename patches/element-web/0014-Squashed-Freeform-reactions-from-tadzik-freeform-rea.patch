@@ -1,4 +1,4 @@
-From 9b12990f85ba4c358347d12fb502eed68ae5ef66 Mon Sep 17 00:00:00 2001
+From 34991cb7a32166efbfab4f09f05f2874180751ae Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Wed, 29 May 2024 19:32:42 +0200
 Subject: Squashed: Freeform reactions from tadzik/freeform-reactions-upstream
@@ -71,7 +71,7 @@ Date:   Tue Aug 17 11:29:22 2021 +0200
  2 files changed, 16 insertions(+)
 
 diff --git a/src/components/views/emojipicker/EmojiPicker.tsx b/src/components/views/emojipicker/EmojiPicker.tsx
-index e2470d188d..868f9b3d7c 100644
+index 0c10d778a6..250c8e0fec 100644
 --- a/src/components/views/emojipicker/EmojiPicker.tsx
 +++ b/src/components/views/emojipicker/EmojiPicker.tsx
 @@ -17,6 +17,7 @@ import Header from "./Header";
@@ -118,7 +118,7 @@ index e2470d188d..868f9b3d7c 100644
                                  <Preview emoji={this.state.previewEmoji} />
                              ) : (
 diff --git a/src/components/views/emojipicker/ReactionPicker.tsx b/src/components/views/emojipicker/ReactionPicker.tsx
-index bd16634490..d70c3df6ec 100644
+index ea1a502942..e49b7e33cd 100644
 --- a/src/components/views/emojipicker/ReactionPicker.tsx
 +++ b/src/components/views/emojipicker/ReactionPicker.tsx
 @@ -126,6 +126,7 @@ class ReactionPicker extends React.Component<IProps, IState> {
@@ -130,5 +130,5 @@ index bd16634490..d70c3df6ec 100644
                  isEmojiDisabled={this.isEmojiDisabled}
                  onFinished={this.props.onFinished}
 -- 
-2.47.1
+2.48.1
 

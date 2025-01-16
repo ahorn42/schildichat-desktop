@@ -1,4 +1,4 @@
-From c1fd46c896b37095efb08343ef287bb449a991e9 Mon Sep 17 00:00:00 2001
+From 51bf3a238471a9c54ae19dd1abe527a60b0d798d Mon Sep 17 00:00:00 2001
 From: su-ex <codeworks@supercable.onl>
 Date: Thu, 30 May 2024 14:35:16 +0200
 Subject: On space switch don't automatically show last opened room
@@ -10,10 +10,10 @@ Subject: On space switch don't automatically show last opened room
  3 files changed, 24 insertions(+), 1 deletion(-)
 
 diff --git a/src/components/structures/MatrixChat.tsx b/src/components/structures/MatrixChat.tsx
-index 548dbff983..6722975ce3 100644
+index f417bd6045..6c6b7e2285 100644
 --- a/src/components/structures/MatrixChat.tsx
 +++ b/src/components/structures/MatrixChat.tsx
-@@ -1450,7 +1450,15 @@ export default class MatrixChat extends React.PureComponent<IProps, IState> {
+@@ -1453,7 +1453,15 @@ export default class MatrixChat extends React.PureComponent<IProps, IState> {
          if (this.screenAfterLogin && this.screenAfterLogin.screen) {
              this.showScreen(this.screenAfterLogin.screen, this.screenAfterLogin.params);
              this.screenAfterLogin = undefined;
@@ -30,7 +30,7 @@ index 548dbff983..6722975ce3 100644
              // Before defaulting to directory, show the last viewed room
              this.viewLastRoom();
          } else {
-@@ -1462,6 +1470,14 @@ export default class MatrixChat extends React.PureComponent<IProps, IState> {
+@@ -1465,6 +1473,14 @@ export default class MatrixChat extends React.PureComponent<IProps, IState> {
          }
      }
  
@@ -46,10 +46,10 @@ index 548dbff983..6722975ce3 100644
          dis.dispatch<ViewRoomPayload>({
              action: Action.ViewRoom,
 diff --git a/src/settings/Settings.tsx b/src/settings/Settings.tsx
-index 3dcb64ced7..31ad386869 100644
+index 45e1145c0f..dfa65a4917 100644
 --- a/src/settings/Settings.tsx
 +++ b/src/settings/Settings.tsx
-@@ -195,6 +195,12 @@ export const SETTINGS: { [setting: string]: ISetting } = {
+@@ -365,6 +365,12 @@ export const SETTINGS: Settings = {
          supportedLevels: LEVELS_ACCOUNT_SETTINGS,
          default: true,
      },
@@ -63,7 +63,7 @@ index 3dcb64ced7..31ad386869 100644
      "feature_video_rooms": {
          isFeature: true,
 diff --git a/src/stores/spaces/SpaceStore.ts b/src/stores/spaces/SpaceStore.ts
-index 60df05478a..0be7ba190a 100644
+index f11cc20b0c..bce2146d4e 100644
 --- a/src/stores/spaces/SpaceStore.ts
 +++ b/src/stores/spaces/SpaceStore.ts
 @@ -265,6 +265,7 @@ export class SpaceStoreClass extends AsyncStoreWithClient<IState> {
@@ -75,5 +75,5 @@ index 60df05478a..0be7ba190a 100644
                  cliSpace?.getMyMembership() !== KnownMembership.Invite &&
                  this.matrixClient.getRoom(roomId)?.getMyMembership() === KnownMembership.Join &&
 -- 
-2.47.1
+2.48.1
 

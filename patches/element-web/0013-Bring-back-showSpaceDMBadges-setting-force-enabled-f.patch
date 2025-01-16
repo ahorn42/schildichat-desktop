@@ -1,4 +1,4 @@
-From e5bfaebacf3dcf6859f0a0c7fedc5841b164767f Mon Sep 17 00:00:00 2001
+From 713dafdaa9935d3a2cb419f6c9b4621b9ebe92d3 Mon Sep 17 00:00:00 2001
 From: su-ex <codeworks@supercable.onl>
 Date: Sun, 26 May 2024 10:43:36 +0200
 Subject: Bring back showSpaceDMBadges setting, force-enabled for now
@@ -12,10 +12,10 @@ Co-authored-by: SpiritCroc <dev@spiritcroc.de>
  2 files changed, 30 insertions(+)
 
 diff --git a/src/settings/Settings.tsx b/src/settings/Settings.tsx
-index 4413cc5762..3dcb64ced7 100644
+index 2431a8d528..45e1145c0f 100644
 --- a/src/settings/Settings.tsx
 +++ b/src/settings/Settings.tsx
-@@ -190,6 +190,11 @@ export const SETTINGS: { [setting: string]: ISetting } = {
+@@ -360,6 +360,11 @@ export const SETTINGS: Settings = {
          default: true,
          controller: new ReloadOnChangeController(),
      },
@@ -28,7 +28,7 @@ index 4413cc5762..3dcb64ced7 100644
      "feature_video_rooms": {
          isFeature: true,
 diff --git a/src/stores/spaces/SpaceStore.ts b/src/stores/spaces/SpaceStore.ts
-index 90358f3310..60df05478a 100644
+index 50aa7748a5..f11cc20b0c 100644
 --- a/src/stores/spaces/SpaceStore.ts
 +++ b/src/stores/spaces/SpaceStore.ts
 @@ -154,9 +154,17 @@ export class SpaceStoreClass extends AsyncStoreWithClient<IState> {
@@ -88,5 +88,5 @@ index 90358f3310..60df05478a 100644
                          const newValue = SettingsStore.getValue("Spaces.enabledMetaSpaces");
                          const enabledMetaSpaces = metaSpaceOrder.filter((k) => newValue[k]);
 -- 
-2.47.1
+2.48.1
 

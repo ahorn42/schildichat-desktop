@@ -1,4 +1,4 @@
-From a6f46111e119e941233de3aec8a2de95a07dcb90 Mon Sep 17 00:00:00 2001
+From 0ec5e88ed052f645796ca8b258bbcb474ac54ae8 Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Sun, 27 Oct 2024 19:55:30 +0100
 Subject: Stronger login background to ensure contrast of our icon with our bg
@@ -8,7 +8,7 @@ Subject: Stronger login background to ensure contrast of our icon with our bg
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/src/components/views/auth/AuthPage.tsx b/src/components/views/auth/AuthPage.tsx
-index 032744413f..71bf8ae6d6 100644
+index 3c7fe2503e..64163e837c 100644
 --- a/src/components/views/auth/AuthPage.tsx
 +++ b/src/components/views/auth/AuthPage.tsx
 @@ -58,7 +58,7 @@ export default class AuthPage extends React.PureComponent<React.PropsWithChildre
@@ -21,5 +21,5 @@ index 032744413f..71bf8ae6d6 100644
          };
  
 -- 
-2.47.1
+2.48.1
 

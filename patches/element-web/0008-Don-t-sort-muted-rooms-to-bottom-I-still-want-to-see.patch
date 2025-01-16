@@ -1,4 +1,4 @@
-From ab77eb4263607e3883a06fee306cb6dacedfe066 Mon Sep 17 00:00:00 2001
+From 3023a83c05387fd322420f8bea8fa97c1bcef85d Mon Sep 17 00:00:00 2001
 From: SpiritCroc <dev@spiritcroc.de>
 Date: Sun, 17 Dec 2023 11:11:58 +0100
 Subject: Don't sort muted rooms to bottom, I still want to see them.
@@ -8,7 +8,7 @@ Subject: Don't sort muted rooms to bottom, I still want to see them.
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/src/stores/room-list/algorithms/list-ordering/OrderingAlgorithm.ts b/src/stores/room-list/algorithms/list-ordering/OrderingAlgorithm.ts
-index 67ee1ca084..67dcaa3855 100644
+index 5cf7631cfe..81b335e3d2 100644
 --- a/src/stores/room-list/algorithms/list-ordering/OrderingAlgorithm.ts
 +++ b/src/stores/room-list/algorithms/list-ordering/OrderingAlgorithm.ts
 @@ -38,7 +38,7 @@ export abstract class OrderingAlgorithm {
@@ -21,5 +21,5 @@ index 67ee1ca084..67dcaa3855 100644
  
      /**
 -- 
-2.47.1
+2.48.1
 
